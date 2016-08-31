@@ -1,2 +1,28 @@
-<h1>Show</h1>
-title: <%= show.title %>
+<section class="show">
+  <h1><%= show.title %></h1>
+  <img class="show__cover" src="<%= show.cover.file.to_url %>" alt="<%= show.title %>" />
+  <div class="show__description"><%= show.description %></div>
+
+  <div class="show__image-gallery">
+    <% show.gallery_images.each do |image| %>
+      <div class="image-gallery__item">
+        <img class="image__cover" src="<%= image.cover.file.to_url %>" />
+        <div class="image__description"><%= image.description %></div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="show__video-gallery">
+    <% show.gallery_videos.each do |video| %>
+      <% if video.embed_code != nil && video.embed_code != "" %>
+        <%= video.embed_code %>
+      <% else %>
+        <div class="video-gallery__item">
+          <a href="<%= video.content.url %>" target="_blank">
+            <img src="<%= video.content.thumbnail_url %>" alt="<%= video.content.title %>" width="<%= video.content.width %>" height="<%= video.content.height %>" />
+          </a>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>
