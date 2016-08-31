@@ -1,1 +1,16 @@
-Contatti
+<section class="contacts">
+  <h1>Contattaci</h1>
+  <p class="contacts__vat-id"><%= dato.contacts.vat_id %></p>
+  <div class="contacts__address"><%= dato.contacts.address %></div>
+  <div class="contacts__map"><%= dato.contacts.map %></div>
+  <ul class="contacts__social-profiles">
+    <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
+      <li>
+        <a class="icon fa-<%= social_profile.platform.icon_name %>" href="<%= social_profile.url %>">
+          <span class="label"><%= social_profile.name %></span>
+        </a>
+      </li>
+      <%= %>
+    <% end %>
+  </ul>
+</section>
