@@ -1,1 +1,13 @@
-Amici
+<section class="friends">
+  <% dato.friends.sort_by(&:position).each do |friend| %>
+    <div class="friend">
+      <a class="friend__logo-container" href="<%= friend.url %>" target="_blank">
+        <img src="<%= friend.logo.file.to_url %>" alt="<%= friend.name %>" />
+      </a>
+      <span class="friend__name"><%= friend.name %></span>
+      <a class="friend__link" href="<%= friend.url %>" target="_blank">
+        More
+      </a>
+    </div>
+  <% end %>
+</section>
