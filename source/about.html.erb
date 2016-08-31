@@ -1,0 +1,27 @@
+<section class="about">
+  <h1>Chi Siamo</h1>
+  <img class="about__cover" src="<%= dato.about.cover.file.to_url %>" alt="Idee In Scena" />
+  <div class="about__description"><%= dato.about.description %></div>
+
+  <section class="about__team-members">
+    <h1>Team</h1>
+    <% dato.about.team_members.sort_by(&:position).each do |team_member| %>
+      <section class="about__team-member">
+        <img class="team-member__cover" src="<%= team_member.cover.file.to_url %>" alt="<%= team_member.full_name %>" />
+        <h1><%= team_member.full_name %></h1>
+        <div class="team-member__description"><%= team_member.description %></div>
+      </section>
+    <% end %>
+  </section>
+
+  <section class="about__collaborators">
+    <h1>Collaboratori</h1>
+    <% dato.about.collaborators.sort_by(&:position).each do |collaborator| %>
+      <section class="about__collaborator">
+        <img class="collaborator__cover" src="<%= collaborator.cover.file.to_url %>" alt="<%= collaborator.name %>" />
+        <h1><%= collaborator.name %></h1>
+        <div class="collaborator__description"><%= collaborator.description %></div>
+      </section>
+    <% end %>
+  </section>
+</section>

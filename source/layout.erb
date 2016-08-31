@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <%= stylesheet_link_tag :style %>
   </head>
   <body>
+    <%= partial "partials/header" %>
     <%= yield %>
+    <%= partial "partials/footer" %>
   </body>
 </html>

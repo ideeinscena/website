@@ -1,0 +1,6 @@
+<section class="shows">
+  <h1>Spettacoli</h1>
+  <% dato.shows.each do |show| %>
+    <%= partial "partials/show", locals: {show: show} %>
+  <% end %>
+</section>
