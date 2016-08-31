@@ -1,0 +1,10 @@
+<section class="show--preview">
+  <% link_to "/show/#{show.slug}.html" do %>
+    <h1><%= show.title %></h1>
+  <% end %>
+  <div class="show--preview__description"><%= show.description %></div>
+  <% link_to "/show/#{show.slug}.html" do %>
+    <img class="show--preview__cover" src="<%= show.cover.file.to_url %>" alt="<%= show.title %>" />
+  <% end %>
+  <%= link_to "More", "/show/#{show.slug}.html", class: "button" %>
+</section>

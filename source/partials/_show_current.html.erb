@@ -1,0 +1,7 @@
+<section class="show--current">
+  <h1><%= dato.current_show.title %></h1>
+  <img class="show--current__cover" src="<%= dato.current_show.cover.file.to_url %>" alt="<%= dato.current_show.title %>" />
+  <div class="show--current__description">
+    <%= dato.current_show.description %>
+  </div>
+</section>
