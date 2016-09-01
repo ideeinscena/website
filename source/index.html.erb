@@ -1,5 +1,32 @@
-<section class="homepage">
-  <h1><%= dato.homepage.title %></h1>
-  <img class="homepage__cover" src="<%= dato.homepage.cover.file.to_url %>" alt="Idee In Scena" />
-  <div class="homepage__description"><%= dato.homepage.description %></div>
-</section>
+<%= partial "partials/homepage_header" %>
+
+<div id="main-wrapper">
+  <div id="main" class="container">
+    <div class="row">
+      <div class="12u">
+        <div class="content">
+
+          <!-- Content -->
+
+            <article class="box page-content">
+
+              <header class="homepage__content-heading">
+                <img class="logo--homepage" src="images/logo.jpg" alt="Logo IDEEinSCENA" />
+                <h2><%= dato.homepage.title %></h2>
+              </header>
+
+              <section>
+                <span class="image featured"><img src="<%= dato.homepage.cover.file.to_url %>" alt="" /></span>
+              </section>
+
+              <section>
+                <%= dato.homepage.description %>
+              </section>
+
+            </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
-    <%= stylesheet_link_tag :style %>
+    <%= partial "partials/head" %>
   </head>
   <body>
-    <%= partial "partials/header" %>
-    <%= yield %>
-    <%= partial "partials/footer" %>
+    <div id="page-wrapper">
+      <%= yield %>
+      <%= partial "partials/footer" %>
+    </div>
+    <%= javascript_include_tag "jquery.min.js" %>
+    <%= javascript_include_tag "jquery.dropotron.min.js" %>
+    <%= javascript_include_tag "skel.min.js" %>
+    <%= javascript_include_tag "skel-viewport.min.js" %>
+    <%= javascript_include_tag "util.js" %>
+    <%= javascript_include_tag "main.js" %>
   </body>
 </html>
