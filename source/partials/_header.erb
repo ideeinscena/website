@@ -1,3 +1,16 @@
+<header id="header">
+  <div class="logo container">
+    <div>
+      <h1>
+        <% link_to "/", id: "logo" do %>
+          IDEE<span class="logo-middle">in</span>SCENA
+        <% end %>
+      </h1>
+      <p>compagnia teatrale amatoriale</p>
+    </div>
+  </div>
+</header>
+
 <nav id="nav">
   <ul>
     <li class="<%= current_page.url == "/" ? "current" : "" %>"><%= link_to "Home", "/" %></li>
