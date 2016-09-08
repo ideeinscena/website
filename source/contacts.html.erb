@@ -1,16 +1,38 @@
-<section class="contacts">
-  <h1>Contattaci</h1>
-  <p class="contacts__vat-id"><%= dato.contacts.vat_id %></p>
-  <div class="contacts__address"><%= dato.contacts.address %></div>
-  <div class="contacts__map"><%= dato.contacts.map %></div>
-  <ul class="contacts__social-profiles">
-    <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
-      <li>
-        <a class="icon fa-<%= social_profile.platform.icon_name %>" href="<%= social_profile.url %>">
-          <span class="label"><%= social_profile.name %></span>
-        </a>
-      </li>
-      <%= %>
-    <% end %>
-  </ul>
-</section>
+<div class="contacts-page">
+  <div class="container">
+    <div class="row 200%">
+      <div class="12u">
+
+        <!-- About -->
+          <section>
+            <h2 class="bg--gray major"><span>Contattaci</span></h2>
+            <p><strong>Partita IVA</strong>: <%= dato.contacts.vat_id %></p>
+            <p><strong>Indirizzo</strong>: <%= dato.contacts.address %></p>
+          </section>
+
+      </div>
+    </div>
+
+    <div class="row 200%">
+      <div class="12u">
+
+        <!-- Contact -->
+          <section>
+            <h2 class="bg--gray major"><span>I nostri account social</span></h2>
+            <ul class="contact">
+              <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
+                <li>
+                  <a class="icon fa-<%= social_profile.platform.icon_name %>" href="<%= social_profile.url %>">
+                    <span class="label"><%= social_profile.name %></span>
+                  </a>
+                </li>
+                <%= %>
+              <% end %>
+            </ul>
+          </section>
+
+      </div>
+    </div>
+  </div>
+
+</div>

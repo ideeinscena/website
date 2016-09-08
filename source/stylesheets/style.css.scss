@@ -48,6 +48,28 @@ $highlight-color: #d54d4d;
   color: $highlight-color;
 }
 
+ul.contact {
+  text-align: center;
+  li {
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+ul.contact li:hover a.fa-youtube {
+  background-color: #e42d2d;
+}
+
+.contacts-page {
+  border-top: 5px solid #c1cac5;
+  padding-top: 6rem;
+}
+
+.bg--gray.major span {
+  background: #f2f5f3;
+}
+
 /* <FOOTER> */
 .hearth {
   color: #ff0000;
