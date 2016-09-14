@@ -1,0 +1,15 @@
+<div class="content content-left">
+    <article class="box page-content">
+      <header>
+        <h2><%= dato.current_show.title %></h2>
+      </header>
+
+      <section>
+        <span class="image featured"><img src="<%= dato.current_show.cover.file.to_url %>" alt="<%= dato.current_show.title %>" /></span>
+      </section>
+
+      <section>
+        <%= dato.current_show.description %>
+      </section>
+    </article>
+</div>

@@ -1,12 +1,33 @@
+<div id="main-wrapper">
+  <div id="main" class="container">
 
-<section class="shows">
-  <h1>Spettacoli</h1>
-  <%= partial "partials/show_current" %>
+    <div class="row">
+      <div class="9u 12u(mobile) important(mobile)">
+        <%= partial "partials/show_current_main" %>
+      </div>
+      <div class="3u 12u(mobile)">
+        <%= partial "partials/shows_sidebar" %>
+      </div>
+    </div>
 
-  <section class="shows__preview">
-    <% dato.shows.each do |show| %>
-      <%= partial "partials/show_preview", locals: {show: show} %>
-    <% end %>
-  </section>
+    <div class="row 200%">
+      <div class="12u">
+        <section class="box features">
+          <h2 class="major"><span>Immagini</span></h2>
+        </section>
+        <%= partial "partials/show_current_image_gallery" %>
+      </div>
+    </div>
 
-</section>
+    <div class="row 200%">
+      <div class="12u">
+        <section class="box features">
+          <h2 class="major"><span>Video</span></h2>
+        </section>
+
+        <%= partial "partials/show_current_video_gallery" %>
+      </div>
+    </div>
+
+  </div>
+</div>

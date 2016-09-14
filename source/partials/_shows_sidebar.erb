@@ -1,0 +1,14 @@
+<div class="sidebar">
+
+  <section>
+    <h2 class="major"><span>Altri spettacoli</span></h2>
+    <ul class="divided">
+      <% dato.shows.each do |show| %>
+        <li>
+          <%= partial "partials/show_preview", locals: {show: show} %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+
+</div>

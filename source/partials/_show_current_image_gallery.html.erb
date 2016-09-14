@@ -1,0 +1,16 @@
+<div>
+  <% dato.current_show.gallery_images.sort_by(&:position).each_slice(4).to_a.each do |row| %>
+    <div class="row">
+      <% row.each do |item| %>
+        <div class="3u 12u(mobile)">
+          <section class="box feature">
+            <a href="<%= item.cover.file.to_url %>" class="image featured" target="_blank"><img src="<%= item.cover.file.to_url %>" alt="" /></a>
+            <div class="description--condensed">
+              <%= item.description %>
+            </div>
+          </section>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

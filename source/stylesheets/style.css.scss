@@ -12,6 +12,17 @@ $highlight-color: #d54d4d;
 }
 /* </DEBUG> */
 
+.description--condensed {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.button--block {
+  display: block !important;
+  text-align: center;
+}
+
 .title .logo-middle {
   color: $highlight-color;
   font-size: 1rem;

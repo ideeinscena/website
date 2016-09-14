@@ -1,0 +1,19 @@
+<div>
+  <% dato.current_show.gallery_videos.sort_by(&:position).each_slice(1).to_a.each do |row| %>
+    <div class="row">
+      <% row.each do |video| %>
+        <div class="12u 12u(mobile)">
+          <section class="box feature">
+            <% if video.embed_code != nil && video.embed_code != "" %>
+              <%= video.embed_code %>
+            <% else %>
+              <a href="<%= video.content.url %>" class="image featured" target="_blank">
+                <img src="<%= video.content.thumbnail_url %>" alt="<%= video.content.title %>" width="<%= video.content.width %>" height="<%= video.content.height %>" />
+              </a>
+            <% end %>
+          </section>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
