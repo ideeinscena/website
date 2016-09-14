@@ -1,5 +1,5 @@
 <div>
-  <% dato.current_show.gallery_videos.sort_by(&:position).each_slice(1).to_a.each do |row| %>
+  <% gallery.sort_by(&:position).each_slice(1).to_a.each do |row| %>
     <div class="row">
       <% row.each do |video| %>
         <div class="12u 12u(mobile)">

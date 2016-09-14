@@ -15,7 +15,7 @@
         <section class="box features">
           <h2 class="major"><span>Immagini</span></h2>
         </section>
-        <%= partial "partials/show_current_image_gallery" %>
+        <%= partial "partials/image_gallery", locals: { gallery: dato.current_show.gallery_images } %>
       </div>
     </div>
 
@@ -25,7 +25,7 @@
           <h2 class="major"><span>Video</span></h2>
         </section>
 
-        <%= partial "partials/show_current_video_gallery" %>
+        <%= partial "partials/video_gallery", locals: { gallery: dato.current_show.gallery_videos } %>
       </div>
     </div>
 

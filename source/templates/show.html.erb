@@ -1,28 +1,40 @@
-<section class="show">
-  <h1><%= show.title %></h1>
-  <img class="show__cover" src="<%= show.cover.file.to_url %>" alt="<%= show.title %>" />
-  <div class="show__description"><%= show.description %></div>
+<div id="main-wrapper">
+  <div id="main" class="container">
+    <div class="row">
+      <div class="12u">
+        <div class="content">
 
-  <div class="show__image-gallery">
-    <% show.gallery_images.each do |image| %>
-      <div class="image-gallery__item">
-        <img class="image__cover" src="<%= image.cover.file.to_url %>" />
-        <div class="image__description"><%= image.description %></div>
-      </div>
-    <% end %>
-  </div>
+            <article class="box page-content">
+              <header>
+                <h2><%= show.title %></h2>
+              </header>
+              <section>
+                <span class="image featured"><img src="<%= show.cover.file.to_url %>" alt="<%= show.title %>" /></span>
+                <%= show.description %>
+              </section>
+            </article>
 
-  <div class="show__video-gallery">
-    <% show.gallery_videos.each do |video| %>
-      <% if video.embed_code != nil && video.embed_code != "" %>
-        <%= video.embed_code %>
-      <% else %>
-        <div class="video-gallery__item">
-          <a href="<%= video.content.url %>" target="_blank">
-            <img src="<%= video.content.thumbnail_url %>" alt="<%= video.content.title %>" width="<%= video.content.width %>" height="<%= video.content.height %>" />
-          </a>
         </div>
-      <% end %>
-    <% end %>
+      </div>
+    </div>
+
+    <div class="row 200%">
+      <div class="12u">
+        <section class="box features">
+          <h2 class="major"><span>Immagini</span></h2>
+        </section>
+        <%= partial "partials/image_gallery", locals: { gallery: show.gallery_images } %>
+      </div>
+    </div>
+
+    <div class="row 200%">
+      <div class="12u">
+        <section class="box features">
+          <h2 class="major"><span>Video</span></h2>
+        </section>
+        <%= partial "partials/video_gallery", locals: { gallery: show.gallery_videos } %>
+      </div>
+    </div>
+
   </div>
-</section>
+</div>
