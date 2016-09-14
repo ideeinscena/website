@@ -10,24 +10,28 @@
       </div>
     </div>
 
-    <div class="row 200%">
-      <div class="12u">
-        <section class="box features">
-          <h2 class="major"><span>Immagini</span></h2>
-        </section>
-        <%= partial "partials/image_gallery", locals: { gallery: dato.current_show.gallery_images } %>
+    <% if dato.current_show.gallery_images.any? %>
+      <div class="row 200%">
+        <div class="12u">
+          <section class="box features">
+            <h2 class="major"><span>Immagini</span></h2>
+          </section>
+          <%= partial "partials/image_gallery", locals: { gallery: dato.current_show.gallery_images } %>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class="row 200%">
-      <div class="12u">
-        <section class="box features">
-          <h2 class="major"><span>Video</span></h2>
-        </section>
+    <% if dato.current_show.gallery_videos.any? %>
+      <div class="row 200%">
+        <div class="12u">
+          <section class="box features">
+            <h2 class="major"><span>Video</span></h2>
+          </section>
 
-        <%= partial "partials/video_gallery", locals: { gallery: dato.current_show.gallery_videos } %>
+          <%= partial "partials/video_gallery", locals: { gallery: dato.current_show.gallery_videos } %>
+        </div>
       </div>
-    </div>
+    <% end %>
 
   </div>
 </div>

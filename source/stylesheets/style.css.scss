@@ -23,6 +23,15 @@ $highlight-color: #d54d4d;
   text-align: center;
 }
 
+.feature--press-review {
+  .image.featured {
+    margin-bottom: 1rem;
+  }
+  .description--condensed {
+    margin-bottom: 1rem;
+  }
+}
+
 .title .logo-middle {
   color: $highlight-color;
   font-size: 1rem;

@@ -1,0 +1,19 @@
+<div>
+  <% gallery.sort_by(&:position).each_slice(4).to_a.each do |row| %>
+    <div class="row">
+      <% row.each do |item| %>
+        <div class="3u 12u(mobile)">
+          <section class="box feature feature--press-review">
+            <a href="<%= item.image.file.to_url %>" class="image featured" target="_blank"><img src="<%= item.image.file.to_url %>" alt="" /></a>
+            <div class="description--condensed">
+              <%= item.description %>
+            </div>
+            <a href="<%= item.document %>" class="icon fa-download button alt">
+              Scarica
+            </a>
+          </section>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

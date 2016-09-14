@@ -18,23 +18,38 @@
       </div>
     </div>
 
-    <div class="row 200%">
-      <div class="12u">
-        <section class="box features">
-          <h2 class="major"><span>Immagini</span></h2>
-        </section>
-        <%= partial "partials/image_gallery", locals: { gallery: show.gallery_images } %>
+    <% if show.gallery_images.any? %>
+      <div class="row 200%">
+        <div class="12u">
+          <section class="box features">
+            <h2 class="major"><span>Immagini</span></h2>
+          </section>
+          <%= partial "partials/image_gallery", locals: { gallery: show.gallery_images } %>
+        </div>
       </div>
-    </div>
+    <% end %>
 
-    <div class="row 200%">
-      <div class="12u">
-        <section class="box features">
-          <h2 class="major"><span>Video</span></h2>
-        </section>
-        <%= partial "partials/video_gallery", locals: { gallery: show.gallery_videos } %>
+    <% if show.gallery_videos.any? %>
+      <div class="row 200%">
+        <div class="12u">
+          <section class="box features">
+            <h2 class="major"><span>Video</span></h2>
+          </section>
+          <%= partial "partials/video_gallery", locals: { gallery: show.gallery_videos } %>
+        </div>
       </div>
-    </div>
+    <% end %>
+
+    <% if show.gallery_press_reviews.any? %>
+      <div class="row 200%">
+        <div class="12u">
+          <section class="box features">
+            <h2 class="major"><span>Rassegna Stampa</span></h2>
+          </section>
+          <%= partial "partials/press_review_gallery", locals: { gallery: show.gallery_press_reviews } %>
+        </div>
+      </div>
+    <% end %>
 
   </div>
 </div>
