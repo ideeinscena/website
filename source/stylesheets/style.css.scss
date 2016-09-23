@@ -7,6 +7,11 @@ $highlight-color: #d54d4d;
   max-width: 200px; // debug code, remove me
 }
 
+.homepage__description p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 .show__cover {
   max-width: 200px; // debug code, remove me
 }
@@ -1905,6 +1910,10 @@ ul.contact li:hover a.fa-youtube {
 
 			.box.feature {
 				text-align: center;
+        p {
+          margin-bottom: 0;
+          text-align: left;
+        }
 			}
 
 			.box.post header {
