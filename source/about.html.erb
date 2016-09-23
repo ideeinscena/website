@@ -14,7 +14,9 @@
 
               <section>
                 <span class="image featured"><img src="<%= dato.about.cover.file.to_url %>" alt="Chi Siamo" /></span>
-                <%= dato.about.description %>
+                <div class="description--strong">
+                  <%= dato.about.description %>
+                </div>
               </section>
 
             </article>
@@ -36,7 +38,9 @@
                       <section class="box feature">
                         <a href="javascript:void(0)" class="image featured"><img src="<%= team_member.cover.file.to_url %>" alt="<%= team_member.full_name %>" /></a>
                         <h3><a href="javascript:void(0)"><%= team_member.full_name %></a></h3>
-                        <%= team_member.description %>
+                        <div class="description--condensed">
+                          <%= team_member.description %>
+                        </div>
                       </section>
                     </div>
                   <% end %>
@@ -55,7 +59,9 @@
                       <section class="box feature">
                         <a href="javascript:void(0)" class="image featured"><img src="<%= collaborator.cover.file.to_url %>" alt="<%= collaborator.name %>" /></a>
                         <h3><a href="javascript:void(0)"><%= collaborator.name %></a></h3>
-                        <%= collaborator.description %>
+                        <div class="description--condensed">
+                          <%= collaborator.description %>
+                        </div>
                       </section>
                     </div>
                   <% end %>
