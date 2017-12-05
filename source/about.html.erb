@@ -13,7 +13,7 @@
               </header>
 
               <section>
-                <span class="image featured"><img src="<%= dato.about.cover.file.to_url %>" alt="Chi Siamo" /></span>
+                <span class="image featured"><img src="<%= dato.about.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="Chi Siamo" /></span>
                 <div class="description--strong">
                   <%= dato.about.description %>
                 </div>
@@ -36,7 +36,7 @@
                   <% team_row.each do |team_member| %>
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
-                        <a href="javascript:void(0)" class="image featured"><img src="<%= team_member.cover.file.to_url %>" alt="<%= team_member.full_name %>" /></a>
+                        <a href="javascript:void(0)" class="image featured"><img src="<%= team_member.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= team_member.full_name %>" /></a>
                         <h3><a href="javascript:void(0)"><%= team_member.full_name %></a></h3>
                         <div class="description--condensed">
                           <%= team_member.description %>
@@ -57,7 +57,7 @@
                   <% collaborators_row.each do |collaborator| %>
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
-                        <a href="javascript:void(0)" class="image featured"><img src="<%= collaborator.cover.file.to_url %>" alt="<%= collaborator.name %>" /></a>
+                        <a href="javascript:void(0)" class="image featured"><img src="<%= collaborator.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= collaborator.name %>" /></a>
                         <h3><a href="javascript:void(0)"><%= collaborator.name %></a></h3>
                         <div class="description--condensed">
                           <%= collaborator.description %>

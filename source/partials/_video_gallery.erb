@@ -8,7 +8,7 @@
               <%= video.embed_code %>
             <% else %>
               <a href="<%= video.content.url %>" class="image featured" target="_blank">
-                <img src="<%= video.content.thumbnail_url %>" alt="<%= video.content.title %>" width="<%= video.content.width %>" height="<%= video.content.height %>" />
+                <img src="<%= video.content.thumbnail_url(fit: 'clip', w: 800, h: 800) %>" alt="<%= video.content.title %>" width="<%= video.content.width %>" height="<%= video.content.height %>" />
               </a>
             <% end %>
           </section>

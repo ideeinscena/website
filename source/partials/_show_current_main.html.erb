@@ -5,7 +5,7 @@
       </header>
 
       <section>
-        <span class="image featured"><img src="<%= dato.current_show.cover.file.to_url %>" alt="<%= dato.current_show.title %>" /></span>
+        <span class="image featured"><img src="<%= dato.current_show.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= dato.current_show.title %>" /></span>
       </section>
 
       <section class="description--strong">

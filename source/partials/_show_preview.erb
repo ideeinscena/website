@@ -3,7 +3,7 @@
     <%= link_to show.title, "/show/#{show.slug}.html" %>
   </h3>
   <% link_to "/show/#{show.slug}.html", class: "image featured" do %>
-    <img src="<%= show.cover.file.to_url %>" alt="<%= show.title %>" />
+    <img src="<%= show.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= show.title %>" />
   <% end %>
   <%= link_to "More", "/show/#{show.slug}.html", class: "button alt button--block" %>
 </article>
