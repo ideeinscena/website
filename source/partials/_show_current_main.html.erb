@@ -13,3 +13,27 @@
       </section>
     </article>
 </div>
+
+    <% if dato.current_show.gallery_images.any? %>
+      <div class="row mv1">
+        <div class="12u">
+          <section class="box features mv1">
+            <h2 class="major"><span>Immagini</span></h2>
+          </section>
+          <%= partial "partials/image_gallery", locals: { gallery: dato.current_show.gallery_images } %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if dato.current_show.gallery_videos.any? %>
+      <div class="row mv1">
+        <div class="12u">
+          <section class="box features mv1">
+            <h2 class="major"><span>Video</span></h2>
+          </section>
+
+          <%= partial "partials/video_gallery", locals: { gallery: dato.current_show.gallery_videos } %>
+        </div>
+      </div>
+    <% end %>
+
