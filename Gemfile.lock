@@ -163,8 +163,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dato (>= 0.3.11)
   middleman (~> 4.1)
-  middleman-dato (~> 0.5)
+  middleman-dato (>= 0.7.2)
   middleman-livereload (~> 3.4)
   pry (~> 0.10)
 
