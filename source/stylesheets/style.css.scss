@@ -2781,3 +2781,14 @@ ul.contact li:hover a.fa-youtube {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.homepage__sponsor {
+  h2 {
+    text-align: center;
+  }
+  .image {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
+}
