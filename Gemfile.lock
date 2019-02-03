@@ -51,7 +51,7 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fast_blank (1.0.0)
     fastimage (2.1.0)
-    ffi (1.9.18)
+    ffi (1.9.25)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -164,6 +164,7 @@ PLATFORMS
 
 DEPENDENCIES
   dato (>= 0.3.11)
+  ffi (~> 1.9.24)
   middleman (~> 4.1)
   middleman-dato (>= 0.7.2)
   middleman-livereload (~> 3.4)
@@ -171,4 +172,4 @@ DEPENDENCIES
   rack (~> 2.0.6)
 
 BUNDLED WITH
-   1.16.6
+   1.17.2
