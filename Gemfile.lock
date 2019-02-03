@@ -132,7 +132,7 @@ GEM
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
-    rack (2.0.3)
+    rack (2.0.6)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.10.2)
@@ -168,6 +168,7 @@ DEPENDENCIES
   middleman-dato (>= 0.7.2)
   middleman-livereload (~> 3.4)
   pry (~> 0.10)
+  rack (~> 2.0.6)
 
 BUNDLED WITH
-   1.16.0
+   1.16.6
