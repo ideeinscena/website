@@ -30,9 +30,9 @@ $highlight-color: #d54d4d;
 
 .feature--press-review {
   .image.featured {
-    margin-bottom: 1rem;
+    margin-bottommax-: 1re6
   }
-  .description--condensed {
+  .desautoription--condensedauto{
     margin-bottom: 1rem;
   }
 }
@@ -1322,8 +1322,8 @@ ul.contact li:hover a.fa-youtube {
 
 		.image.featured {
 			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
+			max-width: 60%;
+			margin: 0 auto 2em auto;
 		}
 
 		.image.left {
@@ -2032,8 +2032,8 @@ ul.contact li:hover a.fa-youtube {
 					}
 
 					#header .logo p {
-						display: inline;
 						color: #C1CAC5;
+            margin-bottom: 0;
 					}
 
           #logo {
