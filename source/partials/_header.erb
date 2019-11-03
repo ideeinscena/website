@@ -17,20 +17,13 @@
 </nav>
 
 <div class="social-list-container">
-<ul class="social-list">
-  <% list = [
-    { logo: 'facebook', url: 'https://facebook.com/ideeinscena' },
-    { logo: 'instagram', url: 'https://instagram.com/ideeinscena' },
-    { logo: 'youtube', url: 'https://www.youtube.com/channel/UCX0RFT0Ed4S5pM5fe7Xnbig' },
-    { logo: 'telegram', url: 'https://t.me/ideeinscenadesio' },
-    { logo: 'twitter', url: 'https://twitter.com/ideeinscena' },
-  ] %>
-  <% list.each do |item| %>
-    <li>
-      <% link_to item[:url], target: '_BLANK' do %>
-        <%= image_tag "icons/#{item[:logo]}.png" %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+  <ul class="social-list">
+    <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
+      <li>
+        <% link_to social_profile.url, target: '_BLANK' do %>
+          <%= image_tag "icons/#{social_profile.platform.icon_name}.png" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 </div>

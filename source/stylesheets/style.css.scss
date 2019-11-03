@@ -100,6 +100,9 @@ $highlight-color: #d54d4d;
 .about__company-heading {
   color: $highlight-color;
 }
+.contacts-heading {
+  color: $highlight-color;
+}
 
 ul.contact {
   text-align: center;
@@ -116,7 +119,7 @@ ul.contact li:hover a.fa-youtube {
 
 .contacts-page {
   border-top: 5px solid #c1cac5;
-  padding-top: 6rem;
+  padding: 6rem 0;
 }
 
 .bg--gray.major span {
