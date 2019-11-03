@@ -1353,8 +1353,13 @@ ul.contact li:hover a.fa-youtube {
 
 		.image.featured {
 			display: block;
-			max-width: 60%;
 			margin: 0 auto 2em auto;
+		}
+
+		@media (min-width: 737px) {
+			.image.featured {
+				max-width: 60%;
+			}
 		}
 
 		.image.left {
