@@ -56,6 +56,17 @@ $highlight-color: #d54d4d;
   text-align: center;
 }
 
+.button--red {
+	background: #d54d4d !important;
+	&:hover {
+		background: #e42d2d !important;
+	}
+}
+
+.button--inline-block {
+	display: inline-block;
+}
+
 .feature--press-review {
   .image.featured {
     margin-bottom: 1rem;
@@ -2798,4 +2809,8 @@ ul.contact li:hover a.fa-youtube {
     margin: 0 auto;
     display: block;
   }
+}
+
+.homepage__update-form {
+	text-align: center;
 }

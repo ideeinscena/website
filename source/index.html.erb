@@ -26,8 +26,14 @@
                   <span class="image featured"><img src="<%= dato.homepage.homepage_sponsor.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="" /></span>
                 </section>
               <% end %>
-
             </article>
+
+            <% if dato.homepage.update_form.present? %>
+              <section class="homepage__update-form">
+                <h2 class="major"><span>Vuoi restare aggiornato sulle nostre iniziative?</span></h2>
+                <%= link_to 'Compila il modulo', dato.homepage.update_form, class: 'button alt button--inline-block button--red', target: '_BLANK' %>
+              </section>
+            <% end %>
 
         </div>
       </div>
