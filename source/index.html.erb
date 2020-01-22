@@ -23,6 +23,10 @@
               <% if dato.homepage.homepage_sponsor.present? %>
                 <section class="homepage__sponsor">
                   <h2><%= dato.homepage.homepage_sponsor.title %></h2>
+
+                  <section class="description--strong mb6">
+                    <%= dato.homepage.homepage_sponsor.description %>
+                  </section>
                   <span class="image featured"><img src="<%= dato.homepage.homepage_sponsor.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="" /></span>
                 </section>
               <% end %>
