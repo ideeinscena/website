@@ -16,6 +16,16 @@
                 <span class="image featured"><img src="<%= dato.about.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="Chi Siamo" /></span>
                 <div class="description--strong">
                   <%= dato.about.description %>
+                  <% if dato.about.legal_documents.count > 0 %>
+                    <ul class="legal-documents">
+                      <% dato.about.legal_documents.each do |legal_document| %>
+                        <li>
+                          <strong><%= legal_document.title %></strong>
+                          <%= link_to '<i class="far fa-file-pdf"></i>', legal_document.url %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  <% end %>
                 </div>
               </section>
 

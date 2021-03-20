@@ -1,5 +1,6 @@
 activate :dato,
-  live_reload: true
+  live_reload: true,
+  preview: true
 
 configure :development do
   activate :livereload
