@@ -12,8 +12,8 @@
                   <% row.each do |item| %>
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
-                        <a href="<%= item.url %>" class="image featured" target="_blank"><img src="<%= item.logo.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= item.name %>" /></a>
-                        <h3><a href="<%= item.url %>" target="_blank"><%= item.name %></a></h3>
+                        <a href="<%= item.url %>" class="image featured" target="_blank" ><img src="<%= item.logo.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= item.name %>" /></a>
+                        <h3 style="color:#e6610c"><a href="<%= item.url %>" target="_blank"><%= item.name %></a></h3>
                       </section>
                     </div>
                   <% end %>
@@ -31,7 +31,7 @@
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
                         <a href="<%= item.url %>" class="image featured" target="_blank"><img src="<%= item.logo.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= item.name %>" /></a>
-                        <h3><a href="<%= item.url %>" target="_blank"><%= item.name %></a></h3>
+                        <h3 style="color:#e6610c"><a href="<%= item.url %>" target="_blank"><%= item.name %></a></h3>
                       </section>
                     </div>
                   <% end %>

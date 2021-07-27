@@ -1,7 +1,7 @@
 <header id="header">
   <div class="logo container">
     <% link_to '/' do %>
-      <%= image_tag 'logo.jpg' %>
+      <%= image_tag 'new_logo.jpg' %>
     <% end %>
   </div>
 </header>
@@ -16,14 +16,4 @@
   </ul>
 </nav>
 
-<div class="social-list-container">
-  <ul class="social-list">
-    <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
-      <li>
-        <% link_to social_profile.url, target: '_BLANK' do %>
-          <%= image_tag "icons/#{social_profile.platform.icon_name}.png" %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-</div>
+

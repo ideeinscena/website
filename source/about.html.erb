@@ -9,7 +9,7 @@
             <article class="box page-content">
 
               <header>
-                <h2>Chi Siamo</h2>
+                <h1>Chi Siamo</h1>
               </header>
 
               <section>
@@ -46,8 +46,8 @@
                   <% team_row.each do |team_member| %>
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
-                        <a href="javascript:void(0)" class="image featured"><img src="<%= team_member.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= team_member.full_name %>" /></a>
-                        <h3><a href="javascript:void(0)"><%= team_member.full_name %></a></h3>
+                        <a href="javascript:void(0)" class="image featured" style="cursor:default"><img src="<%= team_member.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= team_member.full_name %>" /></a>
+                        <h3 style="color:#e6610c; font-size:1.5em; margin-bottom: 1.5em;"><a href="javascript:void(0)" style="cursor:default"><%= team_member.full_name %></a></h3>
                         <div class="description--condensed">
                           <%= team_member.description %>
                         </div>
@@ -67,8 +67,8 @@
                   <% collaborators_row.each do |collaborator| %>
                     <div class="3u 12u(mobile)">
                       <section class="box feature">
-                        <a href="javascript:void(0)" class="image featured"><img src="<%= collaborator.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= collaborator.name %>" /></a>
-                        <h3><a href="javascript:void(0)"><%= collaborator.name %></a></h3>
+                        <a href="javascript:void(0)" class="image featured" style="cursor:default"><img src="<%= collaborator.cover.file.to_url(fit: 'clip', w: 1200, h: 1200) %>" alt="<%= collaborator.name %>" /></a>
+                        <h3 style="color:#e6610c; font-size:1.5em; margin-bottom: 1.5em;"><a href="javascript:void(0)" style="cursor:default"><%= collaborator.name %></a></h3>
                         <div class="description--condensed">
                           <%= collaborator.description %>
                         </div>

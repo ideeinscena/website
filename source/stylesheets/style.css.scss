@@ -1,5 +1,5 @@
 /* <VARIABLES> */
-$highlight-color: #d54d4d;
+$highlight-color: #E6610C;
 /* </VARIABLES> */
 
 /* <DEBUG> */
@@ -8,8 +8,8 @@ $highlight-color: #d54d4d;
 }
 
 .description--strong {
-  font-size: 1.5rem;
-  line-height: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 .show__cover {
@@ -36,7 +36,7 @@ $highlight-color: #d54d4d;
 	grid-gap: 1rem;
 	margin: 0;
 	img {
-		max-height: 64px;
+		max-height: 50px;
 		display: block;
 		&:hover {
 			transition: all 0.25s;
@@ -48,6 +48,7 @@ $highlight-color: #d54d4d;
 .description--condensed {
   p {
     margin-bottom: 0;
+    font-size: 1.2rem;
   }
 }
 
@@ -57,9 +58,9 @@ $highlight-color: #d54d4d;
 }
 
 .button--red {
-	background: #d54d4d !important;
+	background-image: linear-gradient(to bottom, rgb(230,97,12), rgb(229,27,39)) !important;
 	&:hover {
-		background: #e42d2d !important;
+		background: #e6610c !important;
 	}
 }
 
@@ -111,10 +112,10 @@ $highlight-color: #d54d4d;
 /* </HOMEPAGE> */
 
 .about__company-heading {
-  color: $highlight-color;
+  color: #1f2246;			/* $highlight-color */
 }
 .contacts-heading {
-  color: $highlight-color;
+  color: #1f2246;	/* $highlight-color */
 }
 
 ul.contact {
@@ -148,6 +149,7 @@ ul.contact li:hover a.fa-youtube {
 
 @import "font-awesome.min.css";
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
 
 /*
 	TXT by HTML5 UP
@@ -1216,11 +1218,19 @@ ul.contact li:hover a.fa-youtube {
 
 /* Basic */
 
+/* H1 ADDED BY DENISE */
+
+	h1 {
+	font-size: 3.5em;
+	line-height: 1.1em;
+	text-transform: uppercase;
+	}
+
 	body {
 		background: #f2f5f3;
-		font-family: 'Dosis', 'Open Sans', sans-serif;
+		font-family: 'Nunito Sans', 'Black';
 		font-weight: 400;
-		color: #6b7770;
+		color: #1f2246;
 		font-size: 11.5pt;
 		line-height: 2em;
 	}
@@ -1247,18 +1257,19 @@ ul.contact li:hover a.fa-youtube {
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
-		text-transform: uppercase;
-		color: #6b7770;
+		/* text-transform: uppercase; */
+		color: #1f2246;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		text-decoration: none;
 		color: inherit;
+		line-height: 1.3em;
 	}
 
 	h2.major {
 		position: relative;
-		border-top: solid 5px #e7eae8;
+		border-top: solid 5px #e6610c;
 	}
 
 		h2.major span {
@@ -1270,6 +1281,7 @@ ul.contact li:hover a.fa-youtube {
 	a {
 		color: #006376;
 		text-decoration: underline;
+		text-transform: uppercase;
 	}
 
 		a:hover {
@@ -1277,8 +1289,8 @@ ul.contact li:hover a.fa-youtube {
 		}
 
 	b, strong {
-		font-weight: 700;
-		color: #6b7770;
+		font-weight: 800;
+		color: #1f2246;
 	}
 
 	i, em {
@@ -1331,7 +1343,7 @@ ul.contact li:hover a.fa-youtube {
 		display: block;
 		font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
 		font-weight: 700;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		color: #c1cac5;
 	}
 
@@ -1399,15 +1411,15 @@ ul.contact li:hover a.fa-youtube {
 	.button {
 		-webkit-appearance: none;
 		display: inline-block;
-		font-family: 'Dosis', 'Open Sans Condensed', sans-serif;
+		font-family: 'Nunito Sans', 'Black';
 		font-weight: 700;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		text-decoration: none;
-		background: $highlight-color;
+		background-color: #e6610c;
 		color: #fff;
 		border: 0;
 		line-height: 1em;
-		border-radius: 8px;
+		border-radius: 10px;
 		outline: 0;
 		cursor: pointer;
 		-moz-transition: background-color .2s ease-in-out;
@@ -1422,7 +1434,7 @@ ul.contact li:hover a.fa-youtube {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #c1edbb;
+			background: #e6610c;
 		}
 
 		input[type="button"]:active,
@@ -1438,7 +1450,7 @@ ul.contact li:hover a.fa-youtube {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #c1cac5;
+			background-image: linear-gradient(to bottom, rgb(230,97,12), rgb(229,27,39));
 		}
 
 			input[type="button"].alt:hover,
@@ -1446,7 +1458,7 @@ ul.contact li:hover a.fa-youtube {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #ccd5d0;
+				background: #e6610c;
 			}
 
 			input[type="button"].alt:active,
@@ -1469,7 +1481,7 @@ ul.contact li:hover a.fa-youtube {
 		}
 
 	ul.divided > li {
-		border-top: solid 2px #e7eae8;
+		border-top: solid 2px #e6610c;
 		padding-top: 2.35em;
 		margin-top: 2.35em;
 	}
@@ -1800,8 +1812,8 @@ ul.contact li:hover a.fa-youtube {
 
 	#main-wrapper {
 		background: #fff;
-		border-top: solid 5px $highlight-color;
-		border-bottom: solid 5px #c1cac5;
+		border-top: solid 5px #e6610c; /*$highlight-color*/
+		border-bottom: solid 5px #e6610c;
 	}
 
 /* Banner */
@@ -1901,9 +1913,9 @@ ul.contact li:hover a.fa-youtube {
 			}
 
 				h2.major {
-					font-size: 1.65em;
+					font-size: 2em;
 					text-align: center;
-					margin: 0 0 3em 0;
+					margin: 0 0 1em 0;
 				}
 
 					h2.major span {
@@ -2000,8 +2012,8 @@ ul.contact li:hover a.fa-youtube {
 			}
 
 			.box.page-content h2 {
-				font-size: 3em;
-				margin: 0 0 0.5em 0;
+				font-size: 2.6em;
+				margin: 0 0 1.0em 0;
 			}
 
 			.box.page-content header > p {
@@ -2155,7 +2167,7 @@ ul.contact li:hover a.fa-youtube {
 					}
 
 					#nav li.current a {
-						background: $highlight-color;
+						background-image: linear-gradient(to bottom, rgb(230,97,12), rgb(229,27,39));
 						color: #fff;
 					}
 
@@ -2242,7 +2254,7 @@ ul.contact li:hover a.fa-youtube {
 
 			#footer {
 				text-align: center;
-				padding: 8em 0 8em 0;
+				padding: 3em 0 3em 0;
 			}
 
 				#footer h2.major {
@@ -2252,7 +2264,7 @@ ul.contact li:hover a.fa-youtube {
 		/* Copyright */
 
 			#copyright {
-				margin: 4em 0 0 0;
+				margin: 2em 0 0 0;
 			}
 
 	}
@@ -2816,6 +2828,7 @@ ul.contact li:hover a.fa-youtube {
 }
 
 .homepage__update-form {
+	margin-top: 200px;
 	text-align: center;
 }
 

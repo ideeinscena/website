@@ -1,4 +1,15 @@
 <footer id="footer" class="container">
+  <div class="social-list-container">
+  <ul class="social-list">
+    <% dato.contacts.social_profiles.sort_by(&:position).each do |social_profile| %>
+      <li>
+        <% link_to social_profile.url, target: '_BLANK' do %>
+          <%= image_tag "icons/#{social_profile.platform.icon_name}.png" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
   <div id="copyright">
     <ul class="menu">
       <li>
@@ -7,7 +18,7 @@
         </a>
       </li>
       <li>
-        Made with <span class="hearth">♥</span> by <%= link_to "Social Coders", "https://github.com/social-coding" %> and Denise
+        Made with <span class="hearth">♥</span> by <%= link_to "Social Coders", "https://github.com/social-coding" %>
       </li>
       <li>
         <a href="https://html5up.net/txt">TXT Theme</a>
