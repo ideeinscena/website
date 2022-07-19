@@ -127,14 +127,12 @@ GEM
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
-    rack (2.1.4)
+    rack (2.1.4.1)
     rack-livereload (0.3.17)
       rack
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rb-kqueue (0.2.8)
-      ffi (>= 0.5.0)
     rexml (3.2.5)
     ruby2_keywords (0.0.4)
     sassc (2.4.0)
@@ -163,7 +161,6 @@ DEPENDENCIES
   middleman-livereload (~> 3.4)
   pry (~> 0.10)
   rack (~> 2.1.4)
-  rb-kqueue (>= 0.2)
 
 BUNDLED WITH
    1.17.3
